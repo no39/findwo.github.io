@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>刘露华前端简历</title>
+<link rel="stylesheet" href="css/jquery.fullPage.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/waves.min.css"/>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery-ui-1.10.3.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<script type="text/javascript" src="js/waves.min.js"></script>
+<script type="text/javascript" src="js/base.js"></script>
+
+<script>
+$(document).ready(function() {
+	$.fn.fullpage({
+		slidesColor: ['#0075D1', '#E9E9E9','#F3F3F3'],
+		anchors: ['page1', 'page2','page3'],
+		menu: '#menu',
+		
+       afterRender: function(){
+			$('.container a').each(function(){
+				var $rel = $(this).attr('rel');
+				var $arr = $rel.split(',');
+				$(this).animate({
+					left: $arr[2] + 'px',
+					top: $arr[3] + 'px'
+				}, 1000);
+			});
+			},
+
+		afterLoad: function(anchorLink, index){
+
+		    if(index == 1){
+		    	$('.container a').each(function(){
+					var $rel = $(this).attr('rel');
+					var $arr = $rel.split(',');
+					$(this).animate({
+						left: $arr[2] + 'px',
+						top: $arr[3] + 'px'
+					}, 500);
+				});
+			}
+			
+			if(index == 2||index == 3 ){
+				$('.inner').eq(index - 2).find('a').each(function(){
+					var $rel = $(this).attr('rel');
+					var $arr = $rel.split(',');
+					$(this).animate({
+						left: $arr[2] + 'px',
+						top: $arr[3] + 'px'
+					}, 500);
+				});
+			}
+			
+		},
+
+		onLeave: function(index, direction){
+			if(index == 1){
+				$('.container a').each(function(){
+					var $rel = $(this).attr('rel');
+					var $arr = $rel.split(',');
+					$(this).animate({
+						left: $arr[0] + 'px',
+						top: $arr[1] + 'px'
+					}, 500);
+				});
+			}
+		
+			if(index == 2||index == 3 ){
+				$('.inner').eq(index - 2).find('a').each(function(){
+					var $rel = $(this).attr('rel');
+					var $arr = $rel.split(',');
+					$(this).animate({
+						left: $arr[0] + 'px',
+						top: $arr[1] + 'px'
+					}, 500);
+				});
+			}
+			
+		}
+	});
+});
+</script>
+</head>
+
+<body>
+
+<ul id="menu">
+	<li data-menuanchor="page1" class="active"><a href="#page1">TOP</a></li>
+	<li data-menuanchor="page2"><a href="#page2">简介</a></li>
+	<li data-menuanchor="page3"><a href="#page3">技能</a></li>
+</ul>
+
+<div class="section section1">
+         <div class="stars"></div>
+        <div class="twinkling"></div>
+        <div class="clouds"></div>
+		<div class="screen-main">
+		<div class="tree1"><img class="tree1-image" width="300" height="460" src="images/fol.png"></div>
+		<div class="tree2"><img class="tree1-image" width="300" height="170" src="images/960.png"></div>
+	
+	<div class="container">
+		<a id="effect" href="javascript:void(0)" rel="450,-175,450,180">刘露华前端简历<mark>(请点击夜空背景，有惊喜~)</mark></a>
+    </div>
+    </div>
+</div>
+
+<div class="section">
+ 
+    	<div class="tj"><img class="tj-image" width="148" height="88" src="images/4045.gif"></div>
+	<div class="social-inner inner">
+		<a class="soiteml so1" href="javascript:void(0)" rel="450,-175,450,51">刘露华</a>
+		<a class="soiteml so2" href="javascript:void(0)" rel="450,-175,450,110">22岁</a>
+		<a class="soiteml so3" href="javascript:void(0)" rel="450,-175,450,140">女</a>
+		<a  href="javascript:void(0)" rel="450,-175,450,180">————————————————————</a>
+		<a class="soiteml so4" href="javascript:void(0)" rel="980,228,450,228">学校：河北工业大学</a>
+		<a class="soiteml so5" href="javascript:void(0)" rel="980,258,450,258">专业：计算机科学与技术</a>
+		<a class="soiteml so6" href="javascript:void(0)" rel="980,288,450,288">所在地：北京</a>
+		<a class="soiteml so7" href="javascript:void(0)" rel="980,340,450,320">职位：前端开发</a>
+		<a class="soiteml so8" href="javascript:void(0)" rel="980,363,450,373">邮箱：no_39@sina.com</a>
+		<a class="soiteml so9" href="javascript:void(0)" rel="980,428,450,428">手机号：18612244986</a>
+		<a class="soiteml so11" href="javascript:void(0)" rel="-405,434,162,380">我的理念是：</a>
+		<a class="soiteml so12" href="javascript:void(0)" rel="-405,464,162,420">不学后端的前端不是好前端，</a>
+		<a class="soitemr so13" href="javascript:void(0)" rel="15,850,15,460">不学新技术的前端是被淘汰的前端。</a>
+	
+		<a class="soimg1" href="javascript:void(0)" rel="156,-175,156,10"><img class=" waves-image" width="220" height="300" src="images/DSC.jpg"></a>
+		<a class="soimg4" href="javascript:void(0)" rel="507,850,507,494"><img width="225" height="220" src="images/ac43.png"></a>
+	</div>
+</div>
+
+	<div class="section">
+	<div class="social-inner1 inner">
+		<a class="soitem2 so1" href="javascript:void(0)" rel="450,-175,150,51">我的技能：</a>
+		<a class="soitem2 so2" href="javascript:void(0)" rel="450,-175,300,90">掌握html5,css3,jquery，写出符合w3c标准的代码</a>
+		<a class="soitem2 so3" href="javascript:void(0)" rel="450,-175,300,130">熟悉javascript,jquery-ui,bootstrap,ajax,canvas,react,php。可独立完成前后端交互。</a>
+		<a class="soitem2 so4" href="javascript:void(0)" rel="980,228,300,170">熟悉angularJS,可熟练使用photoshop制作各种素材，海报设计</a>
+		<a class="soitem2 so5" href="javascript:void(0)" rel="980,258,100,210">熟练使用工具：</a>
+		<a class="soitem2 so6" href="javascript:void(0)" rel="980,288,300,215">dreamweaver</a>
+		<a class="soitem2 so7" href="javascript:void(0)" rel="980,340,300,255">sublime</a>
+		<a class="soitem2 so8" href="javascript:void(0)" rel="980,363,300,295">photoshop</a>
+		<a class="soitem2 so9" href="javascript:void(0)" rel="980,428,300,335">phpMyAdmin</a>
+		<a class="soitem2 so10" href="javascript:void(0)" rel="-405,369,150,410">工作经验：</a>
+		<a class="soitem2 so2" href="javascript:void(0)" rel="-405,369,300,415">2016年暑假，至16年11月在沧州实习前端和后台维护，</a>
+		<a class="soitem2 so2" href="javascript:void(0)" rel="-405,369,300,455">用dreamweaver,phpMyAdmin。本页面用html5,jquery,css,canvas,javascript编写。</a>
+	
+	</div>	
+</div>
+ <script type="text/javascript">
+     Waves.init();
+     Waves.attach('.flat-box', ['waves-block']);
+     Waves.attach('.float-box', ['waves-block', 'waves-float']);
+     Waves.attach('.waves-image');
+                                
+    </script>
+</body>
+</html>
